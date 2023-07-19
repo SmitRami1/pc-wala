@@ -32,8 +32,8 @@
           </li>
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="hover">
-          <a href="#"><img src="../Images/cart.png" alt="Can't Load Image" id="cart" id="hover"></a>
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <a href="#"><img src="../Images/cart.png" alt="Can't Load Image" id="cart"></a>
         </form>
       </div>
     </div>
