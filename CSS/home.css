@@ -4,9 +4,23 @@ body{
     padding: 0;
     margin: 0;
 }
+#logo{
+    height: 65px;
+    width: 65px;
+}
+#cart{
+    height: 55px;
+    width: 55px;
+}
+.navbar-brand{
+    margin-left: 8px;
+    font-family: 'Baloo Tamma 2', cursive;
+    font-size: 26px;
+    font-weight: bold;
+}
 .container-fluid{
     font-size: large;
-    background-color: aqua;
+    background-color: rgba(0, 255, 255, 0.89);
     position: relative;
     bottom: 7.65px;
     height: 60px;
@@ -19,4 +33,13 @@ body{
 }
 .form-control{
     width: 210px;
+    height: 46px;
+    margin-top: 4px;
+    border-color: black;
+    border-width: 2.1px;
+    border-radius: 25px;
+}
+#hover:hover{
+    font-size: 19.7px;
+    transition: 0.2s;
 }
