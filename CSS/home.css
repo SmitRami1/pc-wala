@@ -3,7 +3,6 @@ body{
     font-family: 'Baloo Tamma 2', cursive;
     padding: 0;
     margin: 0;
-    background-color: aqua;
 }
 #logo{
     height: 65px;
@@ -59,4 +58,14 @@ body{
     transition: 0.2s;
     margin: -3px;
     margin-top: 3px;
+}
+.carousel-item img{
+    height: 450px;
+    width: 70%;
+    position: relative;
+    left: 70px;
+}
+.carousel-inner{
+    width: 100%;
+
 }
