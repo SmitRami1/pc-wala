@@ -3,6 +3,7 @@ body{
     font-family: 'Baloo Tamma 2', cursive;
     padding: 0;
     margin: 0;
+    background-color: aqua;
 }
 #logo{
     height: 65px;
