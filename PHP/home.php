@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../CSS/home.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-light">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <img src="../Images/logo.gif" alt="Can't Load Image" id="logo">
       <a class="navbar-brand" href="#">PC WALA</a>
@@ -35,31 +35,26 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <a href="#"><img src="../Images/cart.png" alt="Can't Load Image" id="cart"></a>
         </form>
-      </div>
+      </div>   
     </div>
   </nav>
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="../Images/Setup.jpg" class="d-block" alt="failed to load image">
+      <img src="../Images/best seller.jpg" class="d-block" alt="failed to load image">
     </div>
     <div class="carousel-item">
       <img src="../Images/amd.jpg" class="d-block" alt="failed to load image">
     </div>
     <div class="carousel-item">
-      <img src="../Images/Setup.jpg" class="d-block" alt="failed to load image">
+      <img src="../Images/best seller.jpg" class="d-block" alt="failed to load image">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>

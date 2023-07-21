@@ -3,6 +3,9 @@ body{
     font-family: 'Baloo Tamma 2', cursive;
     padding: 0;
     margin: 0;
+    background-image: url("../Images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #logo{
     height: 65px;
@@ -26,7 +29,7 @@ body{
 }
 .container-fluid{
     font-size: large;
-    background-color: rgba(0, 255, 255, 0.89);
+    background-image: url("../Images/background.jpg");
     position: relative;
     bottom: 7.65px;
     height: 60px;
@@ -60,12 +63,19 @@ body{
     margin-top: 3px;
 }
 .carousel-item img{
-    height: 450px;
-    width: 70%;
+    height: 495px;
+    width: 80%;
     position: relative;
-    left: 70px;
+    left: 130px;
+    cursor: grab;
 }
 .carousel-inner{
-    width: 100%;
-
+    width: 98%;
+}
+.carousel-control-prev{
+  margin-left: 100px;
+}
+.carousel-control-next-icon{
+  position: relative;
+  right: 100px;
 }
