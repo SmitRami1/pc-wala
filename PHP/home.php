@@ -19,16 +19,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" id="hover">Home</a>
+            <a class="nav-link" aria-current="page" href="#" id="hover">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#" id="hover">Category</a>
+            <a class="nav-link" href="#" id="hover">Category</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#" id="hover">Pre-Built</a>
+            <a class="nav-link" href="#" id="hover">Pre-Built</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="#" id="hover">Contact Us</a>
+            <a class="nav-link" href="#" id="hover">Contact Us</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
