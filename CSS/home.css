@@ -4,11 +4,9 @@ body{
     padding: 0;
     margin: 0;
     height: 100%;
-    /* background-color: whitesmoke; */
     background-image: url("../Images/background.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter: blur(1000px);
 }
 #logo{
     height: 65px;
@@ -82,12 +80,41 @@ body{
 .carousel-inner{
     width: 100%;
 }
-.carousel-inner img{
-    
-}
 .carousel-control-prev{
   margin-left: 170px;
 }
 .carousel-control-next{
   margin-right: 168px;
+}
+.row{
+    margin-top: 15px;
+    margin-left: 30px;
+    padding-left: -100px;
+    width: 300px;
+    border: 8px solid whitesmoke;
+    border-radius: 15px;
+}
+.card1{
+    position: relative;
+    left: 9px;
+    
+}
+.card2{
+    position: relative;
+    right: 9px;
+    top: 0px;
+}
+.card3{
+    position: relative;
+    bottom: 20px;
+    left: 9px;
+}
+.card4{
+    position: relative;
+    bottom: 20px;
+    right: 9px;
+}
+.gridrow{
+    display: flex;
+    flex-direction: row;
 }
