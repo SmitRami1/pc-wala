@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@750&display=swap');
 body{
     font-family: 'Baloo Tamma 2', cursive;
     padding: 0;
     margin: 0;
     height: 100%;
-    background-image: url("../Images/background.jpeg");
+    background-color: rgb(227, 227, 227);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -27,18 +27,19 @@ body{
     font-family: 'Baloo Tamma 2', cursive;
     font-size: 26px;
     font-weight: bold;
-    color: rgb(248, 248, 248);
+    color: black;
 }
 .container-fluid{
     font-size: large;
-    background-color: rgb(19, 19, 19);
+    background-image: url(../Images/navbackground.jpg);
     position: relative;
     bottom: 7.65px;
     height: 60px;
     border-bottom: 2px solid black;
 }
 .nav-link{
-    color: rgb(248, 248, 248);
+    color: rgb(22, 22, 22);
+    font-weight: bolder;
 }
 .navbar-nav{
     display: flex;
@@ -68,9 +69,10 @@ body{
     transition: 0.2s;
     margin: -3px;
     margin-top: 3px;
-    color: white;
+    color: black;
 }
 .carousel-item img{
+    border: 5px solid black;
     height: 320px;
     width: 70%;
     position: relative;
@@ -80,41 +82,36 @@ body{
 .carousel-inner{
     width: 100%;
 }
-.carousel-control-prev{
-  margin-left: 170px;
-}
 .carousel-control-next{
-  margin-right: 168px;
+    margin-right: 130px;
+}
+.carousel-control-next-icon{
+    outline: black;
+    border-radius: 11px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.551);
+}
+.carousel-control-next-icon:hover{
+    background-color: rgba(0, 0, 0, 0.76);
+}
+.carousel-control-prev{
+  margin-left: 130px;
+}
+.carousel-control-prev-icon{
+    outline: black;
+    border-radius: 11px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.551);
+}
+.carousel-control-prev-icon:hover{
+    background-color: rgba(0, 0, 0, 0.76);
 }
 .row{
     margin-top: 15px;
-    margin-left: 30px;
-    padding-left: -100px;
-    width: 300px;
-    border: 8px solid whitesmoke;
-    border-radius: 15px;
 }
-.card1{
-    position: relative;
-    left: 9px;
-    
-}
-.card2{
-    position: relative;
-    right: 9px;
-    top: 0px;
-}
-.card3{
-    position: relative;
-    bottom: 20px;
-    left: 9px;
-}
-.card4{
-    position: relative;
-    bottom: 20px;
-    right: 9px;
-}
-.gridrow{
-    display: flex;
-    flex-direction: row;
+#grid1img{
+    height: 250px;
+    width: 250px;
+    border: 6px solid black;
+    border-radius: 12px;
 }
