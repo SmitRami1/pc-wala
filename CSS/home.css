@@ -106,12 +106,33 @@ body{
 .carousel-control-prev-icon:hover{
     background-color: rgba(0, 0, 0, 0.76);
 }
-.row{
+.container{
     margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
-#grid1img{
+.container img{
     height: 250px;
     width: 250px;
     border: 6px solid black;
     border-radius: 12px;
+    max-width: 100%;
+}
+.container label{
+    position: absolute;
+    bottom: 7%;
+    padding: 10px;    
+}
+#grid1lab1{
+    padding-left: 100px;
+}
+#grid1lab2{
+    padding-left: 360px;
+}
+#grid1lab3{
+    padding-left: 670px;
+}
+#grid1lab4{
+    padding-left: 930px;
 }
