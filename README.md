@@ -1,2 +1,2 @@
 # pc-wala
-Collage project on pc selling website
+College project on pc selling website
