@@ -4,13 +4,13 @@ body{
     padding: 0;
     margin: 0;
     height: 100%;
-    background-color: rgb(227, 227, 227);
+    background-color: rgb(233, 233, 233);
     background-repeat: no-repeat;
     background-size: cover;
 }
 #logo{
-    height: 65px;
-    width: 65px;
+    height: 50px;
+    width: 50px;
 }
 #cart{
     height: 55px;
@@ -35,7 +35,7 @@ body{
     position: relative;
     bottom: 7.65px;
     height: 60px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgba(165, 165, 165, 0.438);
 }
 .nav-link{
     color: rgb(22, 22, 22);
@@ -52,7 +52,7 @@ body{
     width: 210px;
     height: 46px;
     margin-top: 4px;
-    border-color: black;
+    border-color: rgba(0, 0, 0, 0.315);
     border-width: 2.1px;
     border-radius: 25px;
     font-size: large;
@@ -72,7 +72,6 @@ body{
     color: black;
 }
 .carousel-item img{
-    border: 5px solid black;
     height: 320px;
     width: 70%;
     position: relative;
@@ -115,9 +114,9 @@ body{
 .container img{
     height: 250px;
     width: 250px;
-    border: 6px solid black;
-    border-radius: 12px;
+    box-shadow: rgb(85, 85, 85) 10px 10px 10px 0px;
     max-width: 100%;
+    background-color: white;
 }
 .container label{
     position: absolute;
@@ -148,13 +147,13 @@ body{
     flex-direction: column;
 }
 #grid2lab1{
-    padding-left: 98px;
+    padding-left: 80px;
 }
 #grid2lab2{
-    padding-left: 360px;
+    padding-left: 390px;
 }
 #grid2lab3{
-    padding-left: 670px;
+    padding-left: 655px;
 }
 #grid2lab4{
     padding-left: 930px;
