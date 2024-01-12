@@ -63,25 +63,42 @@
 </div>
 <div class="container">
   <div class="row row-cols-auto">
-    <div class="col"><img src="../Images/i9.jpg" alt="Can't Load Image" id="grid1img"></div>
-    <div class="col"><img src="../Images/rtx 4090.jpg" alt="Can't Load Image" id="grid1img"></div>
-    <div class="col"><img src="../Images/ram.png" alt="Can't Load Image" id="grid1img"></div>
-    <div class="col"><img src="../Images/cabinet.png" alt="Can't Load Image" id="grid1img"></div>
-    <label for="processor" id="grid1lab1">Processors</label>
-    <label for="graphics-card" id="grid1lab2">Graphics Cards</label>
-    <label for="ram" id="grid1lab3">RAM</label>
-    <label for="cabinet" id="grid1lab4">Cabinets</label>
-  </div>
-  <div class="container2  ">
-  <div class="row row-cols-auto">
-    <div class="col"><img src="../Images/motherboard.png" alt="Can't Load Image" id="grid2img"></div>
-    <div class="col"><img src="../Images/smps.jpg" alt="Can't Load Image" id="grid2img"></div>
-    <div class="col"><img src="../Images/ssd.jpg" alt="Can't Load Image" id="grid2img"></div>
-    <div class="col"><img src="../Images/monitor.jpg" alt="Can't Load Image" id="grid2img"></div>
-    <label for="motherboard" id="grid2lab1">Motherboards</label>
-    <label for="smps" id="grid2lab2">SMPS</label>
-    <label for="monitor" id="grid2lab3">Storage</label>
-    <label for="cabinet" id="grid2lab4">Monitors</label>
+
+    <?php
+    // Replace these credentials with your actual database credentials
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "pc-wala";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Fetch data from the database
+    $sql = "SELECT name, image FROM category";
+    $result = $conn->query($sql);
+
+    // Loop through the fetched data
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo '<div class="col">';
+            echo '<img src="' . $row["image"] . '" alt="Can\'t Load Image" id="grid1img">';
+            echo '<label for="" id="grid1lab">' . $row["name"] . '</label>';
+            echo '</div>';
+        }
+    } else {
+        echo "0 results";
+    }
+
+    // Close the database connection
+    $conn->close();
+    ?>
+
   </div>
 </div>
 <footer class="footer">

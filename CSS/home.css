@@ -112,33 +112,30 @@ body{
     flex-direction: column;
 }
 .container img{
-    height: 250px;
+    height: 300px;
     width: 250px;
     box-shadow: rgb(85, 85, 85) 10px 10px 10px 0px;
     max-width: 100%;
+    padding: 20px;
     background-color: white;
+    position: absolute;
 }
 .container label{
-    position: absolute;
+    position: relative;
     padding: 10px;
-    margin-top: 205px;
+    margin-top: 260px;
+    margin-left: 76px;
+    text-align: center;
+    align-items: center;
 }
-#grid1lab1{
-    padding-left: 100px;
-}
-#grid1lab2{
-    padding-left: 360px;
-}
-#grid1lab3{
-    padding-left: 670px;
-}
-#grid1lab4{
-    padding-left: 930px;
+.row{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
 }
 #grid1img:hover{
-    transition: .2s;
-    margin-top: -3.5px;
+    transition: .1s;
     cursor: pointer;
+    transform: scale(1.03,1.03);
 }
 .container2{
     margin-top: 15px;
@@ -147,7 +144,7 @@ body{
     flex-direction: column;
 }
 #grid2lab1{
-    padding-left: 80px;
+    margin-left: 90px;
 }
 #grid2lab2{
     padding-left: 390px;
