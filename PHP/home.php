@@ -80,7 +80,7 @@
     }
 
     // Fetch data from the database
-    $sql = "SELECT name, image FROM category";
+    $sql = "SELECT image FROM categories";
     $result = $conn->query($sql);
 
     // Loop through the fetched data
@@ -88,7 +88,6 @@
         while ($row = $result->fetch_assoc()) {
             echo '<div class="col">';
             echo '<img src="' . $row["image"] . '" alt="Can\'t Load Image" id="grid1img">';
-            echo '<label for="" id="grid1lab">' . $row["name"] . '</label>';
             echo '</div>';
         }
     } else {

@@ -71,18 +71,21 @@ body{
     margin-top: 3px;
     color: black;
 }
+.carousel-item{
+    position: relative;
+    left: 15%;
+}
 .carousel-item img{
     height: 320px;
     width: 70%;
-    position: relative;
-    left: 201px;
+    align-items: center;
     cursor: grab;
 }
 .carousel-inner{
     width: 100%;
 }
 .carousel-control-next{
-    margin-right: 130px;
+    margin-right: 180px;
 }
 .carousel-control-next-icon{
     outline: black;
@@ -94,7 +97,7 @@ body{
     background-color: rgba(0, 0, 0, 0.76);
 }
 .carousel-control-prev{
-  margin-left: 130px;
+  margin-left: 170px;
 }
 .carousel-control-prev-icon{
     outline: black;
@@ -112,21 +115,11 @@ body{
     flex-direction: column;
 }
 .container img{
-    height: 300px;
-    width: 250px;
+    height: 290px;
+    width: 280px;
     box-shadow: rgb(85, 85, 85) 10px 10px 10px 0px;
     max-width: 100%;
-    padding: 20px;
-    background-color: white;
-    position: absolute;
-}
-.container label{
-    position: relative;
-    padding: 10px;
-    margin-top: 260px;
-    margin-left: 76px;
-    text-align: center;
-    align-items: center;
+    margin-top: 50px;
 }
 .row{
     display: grid;
@@ -136,27 +129,4 @@ body{
     transition: .1s;
     cursor: pointer;
     transform: scale(1.03,1.03);
-}
-.container2{
-    margin-top: 15px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-#grid2lab1{
-    margin-left: 90px;
-}
-#grid2lab2{
-    padding-left: 390px;
-}
-#grid2lab3{
-    padding-left: 655px;
-}
-#grid2lab4{
-    padding-left: 930px;
-}
-#grid2img:hover{
-    transition: .2s;
-    margin-top: -3.5px;
-    cursor: pointer;
 }
