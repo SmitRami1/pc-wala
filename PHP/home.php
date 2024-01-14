@@ -87,7 +87,7 @@
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo '<div class="col">';
-            echo '<img src="' . $row["image"] . '" alt="Can\'t Load Image" id="grid1img">';
+            echo '<a href="products.php?category=processor"><img src="' . $row["image"] . '" alt="Can\'t Load Image" id="grid1img">';
             echo '</div>';
         }
     } else {
