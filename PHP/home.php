@@ -80,14 +80,14 @@
     }
 
     // Fetch data from the database
-    $sql = "SELECT image FROM categories";
+    $sql = "SELECT name, image FROM categories";
     $result = $conn->query($sql);
 
     // Loop through the fetched data
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo '<div class="col">';
-            echo '<a href="products.php?category=processor"><img src="' . $row["image"] . '" alt="Can\'t Load Image" id="grid1img">';
+            echo '<a href="products.php?category=' . $row["name"]  . '"><img src="' . $row["image"] . '" alt="Can\'t Load Image" id="grid1img">';
             echo '</div>';
         }
     } else {

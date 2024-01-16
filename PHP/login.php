@@ -12,8 +12,12 @@
             <div class="logo-part">
                 <img src="../Images/logo.png" alt="Can't Load Image">
             </div>
-            <form action="">
-            <input type="text" placeholder="Email">
+            <form action="" class="form">
+            <h1>Register</h1>
+            <input type="text" placeholder="Email" name="email">
+            <input type="password" placeholder="Password" name="pass">
+            <input type="submit" id="sbt" name="sbt" value="Login">
+            <label for="register">Don't Have An Account?<a href="../PHP/register.php"> Create One</a></label>
         </form> 
         </div>
     </div>
