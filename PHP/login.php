@@ -12,11 +12,42 @@
             <div class="logo-part">
                 <img src="../Images/logo.png" alt="Can't Load Image">
             </div>
-            <form action="" class="form">
-            <h1>Register</h1>
-            <input type="text" placeholder="Email" name="email">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="form" method="POST">
+            <h1>Login</h1>
+            <input type="text" placeholder="Username" name="usrname">
             <input type="password" placeholder="Password" name="pass">
             <input type="submit" id="sbt" name="sbt" value="Login">
+            <?php
+session_start();
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "pc-wala";
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $usrname = $_POST["usrname"];
+    $pass = $_POST["pass"];
+    $login_query = "SELECT * FROM users WHERE username = '$usrname' AND password = '$pass'";
+    $result = $conn->query($login_query);
+
+    if ($result->num_rows == 1) {
+        $_SESSION["username"] = $usrname;
+        setcookie("username", $usrname, time() + 3600, "/");
+        header("Location: ../PHP/home.php");
+        exit();
+    } else {
+        $error_message = "Invalid username or password";
+    }
+}
+
+$conn->close();
+?>
             <label for="register">Don't Have An Account?<a href="../PHP/register.php"> Create One</a></label>
         </form> 
         </div>

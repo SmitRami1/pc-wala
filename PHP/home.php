@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+// Check if the user is logged in
+if (isset($_SESSION["username"])) {
+    $loggedIn = true;
+    $username = $_SESSION["username"];
+} else {
+    $loggedIn = false;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,8 +46,13 @@
         </ul>
         <form class="d-flex" role="search">
           <div class="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        </div>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          </div>
+          <?php if ($loggedIn) : ?>
+                      <p class="navbar-text">Logged In as <?php echo $username; ?></p>
+                  <?php else : ?>
+                      <a href="login.php" class="btn btn-outline-success">Login</a>
+                  <?php endif; ?>
           <a href="#"><img src="../Images/cart.png" alt="Can't Load Image" id="cart"></a>
         </form>
       </div>   

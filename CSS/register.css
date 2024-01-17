@@ -3,7 +3,7 @@ body{
     font-family: 'Baloo Tamma 2', cursive;
     padding: 0;
     margin: 0;
-    background-image: url("../Images/login-image.png");
+    background-color: #87d4ee;
     background-size: 100%;
     background-repeat: no-repeat;
     overflow-x: hidden;
