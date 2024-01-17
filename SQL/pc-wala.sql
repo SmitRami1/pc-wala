@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 12, 2024 at 04:37 PM
+-- Generation Time: Jan 17, 2024 at 06:50 AM
 -- Server version: 8.2.0
 -- PHP Version: 8.2.13
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
 --
 
 INSERT INTO `categories` (`name`, `image`) VALUES
-('Processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/processor.png?raw=true'),
+('processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/processor.png?raw=true'),
 ('Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/graphics%20card.png?raw=true'),
 ('Ram', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/ram.png?raw=true'),
 ('Cabinet', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/cabinet.png?raw=true'),
@@ -66,6 +66,27 @@ CREATE TABLE IF NOT EXISTS `products` (
 
 INSERT INTO `products` (`name`, `price`, `category`) VALUES
 ('I3 12th Gen', '₹9000', 'processor');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  UNIQUE KEY `username` (`username`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`username`, `password`) VALUES
+('ssss', 'ssss'),
+('smit', '123');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
