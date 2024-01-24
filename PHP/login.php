@@ -36,14 +36,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $login_query = "SELECT * FROM users WHERE username = '$usrname' AND password = '$pass'";
     $result = $conn->query($login_query);
 
-    if ($result->num_rows == 1) {
-        $_SESSION["username"] = $usrname;
-        setcookie("username", $usrname, time() + 3600, "/");
-        header("Location: ../PHP/home.php");
-        exit();
-    } else {
-        $error_message = "Invalid username or password";
-    }
+if ($result->num_rows == 1) {
+    $_SESSION["username"] = $usrname;
+    setcookie("username", $usrname, time() + 3600, "/");
+    header("Location: ../PHP/home.php");
+    exit();
+} 
+else{
+    $error_message = "Invalid username or password";
+}
+
 }
 
 $conn->close();

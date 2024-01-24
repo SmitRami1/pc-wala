@@ -108,7 +108,7 @@ body{
 .carousel-control-prev-icon:hover{
     background-color: rgba(0, 0, 0, 0.76);
 }
-.container{
+/* .container{
     margin-top: 15px;
     width: 100%;
     display: flex;  
@@ -120,13 +120,13 @@ body{
     box-shadow: rgb(85, 85, 85) 10px 10px 10px 0px;
     max-width: 100%;
     margin-top: 50px;
-}
+} */
 .row{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-}
+} 
 #grid1img:hover{
     transition: .1s;
     cursor: pointer;
     transform: scale(1.03,1.03);
-}
+} 
