@@ -130,3 +130,9 @@ body{
     cursor: pointer;
     transform: scale(1.03,1.03);
 } 
+.btn {
+    height: 40px;
+}
+.btn-outline-success{
+    margin-top: 9px;
+}

@@ -51,9 +51,9 @@ if (isset($_SESSION["username"])) {
           </div>
           <?php if ($loggedIn) : ?>
           </form>
-                      <p class="navbar-text login-stat"><?php echo $username; ?></p>
+                      <a class="navbar-text login-stat" href="logout.php">Logout</a>
                   <?php else : ?>
-                      <a href="login.php" class="btn btn-outline-success log-btn">Login</a>
+                      <a href="login.php" class="btn btn-outline-success">Login</a>
                   <?php endif; ?>
           <a href="#"><img src="../Images/cart.png" alt="Can't Load Image" id="cart"></a>
       </div>   
@@ -84,32 +84,23 @@ if (isset($_SESSION["username"])) {
   <div class="row row-cols-auto">
 
     <?php
-    // Replace these credentials with your actual database credentials
     $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "pc-wala";
-
-    // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-
-    // Fetch data from the database
     $sql = "SELECT name, image FROM categories";
     $result = $conn->query($sql);
 
-    // Loop through the fetched data
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo '<div class = "products">
             <div class = "container">
                 <div class = "product-items">
                   <div class="col">
-                    <!-- single product -->
                     <div class = "product">
                       <a href="allproducts.php?category=' . $row["name"]  . '">
                         <div class = "product-content">
@@ -133,8 +124,6 @@ if (isset($_SESSION["username"])) {
     } else {
         echo "0 results";
     }
-
-    // Close the database connection
     $conn->close();
     ?>
 
