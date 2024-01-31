@@ -32,7 +32,7 @@
      $login = "INSERT INTO users (username,password) VALUES('" . $_POST["usrname"] . "','" . $_POST["pass"] . "')";
      $results = $conn->query($sql);
     if (isset($_POST['sbt'])) {
-        if ($_POST['pass']==$_POST['pass']) {
+        if ($_POST['pass']==$_POST['cpass']) {
         try {
             mysqli_query($conn, $login);
             echo "<h1>Record inserted successfully.</h1>";
