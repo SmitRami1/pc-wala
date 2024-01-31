@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 29, 2024 at 08:07 AM
--- Server version: 8.0.31
--- PHP Version: 8.0.26
+-- Generation Time: Jan 31, 2024 at 04:40 PM
+-- Server version: 8.2.0
+-- PHP Version: 8.2.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -57,15 +57,16 @@ DROP TABLE IF EXISTS `products`;
 CREATE TABLE IF NOT EXISTS `products` (
   `name` varchar(50) NOT NULL,
   `price` varchar(10) NOT NULL,
-  `category` varchar(15) NOT NULL
+  `category` varchar(15) NOT NULL,
+  `image` varchar(1000) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`name`, `price`, `category`) VALUES
-('I3 12th Gen', '₹9000', 'processor');
+INSERT INTO `products` (`name`, `price`, `category`, `image`) VALUES
+('I3 12th Gen', '₹9000', 'processor', 'https://raw.githubusercontent.com/SmitRami1/pc-wala/main/Images/i3.jpg');
 
 -- --------------------------------------------------------
 
@@ -92,7 +93,10 @@ INSERT INTO `users` (`username`, `password`) VALUES
 ('jil', '1234'),
 ('admin', 'admin'),
 ('sd', 'f'),
-('f', 'd');
+('f', 'd'),
+('sdsd', 'sdsd'),
+('fd', 'sd'),
+('rami', 'lkj');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
