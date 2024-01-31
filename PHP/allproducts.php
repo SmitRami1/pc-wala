@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products | PC WALA</title>
-    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/allproducts.css">
+    <link rel="stylesheet" href="../CSS/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
@@ -56,10 +57,29 @@ $result = $conn->query($sql);
         <?php
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo '<div class="product-card">';
-                echo '<h3>' . $row['name'] . '</h3>';
-                echo '<span>' . $row['price'] . '</span>';
-                echo '</div>';
+              echo '<div class = "products">
+              <div class = "container">
+                  <div class = "product-items">
+                    <div class="col">
+                      <div class = "product">
+                        <a href="allproducts.php?category=' . $row["name"]  . '">
+                          <div class = "product-content">
+                              <div class = "product-img">
+                                  <img src = "'.$row["image"].'" alt = "product image" id="pro-img">
+                              </div>
+                          </div>
+  
+                          <div class = "product-info">
+                              <div class = "product-info-top">
+                                  <h2 class = "sm-title">'. $row["name"] .'</h2>
+                              </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>';
             }
         } else {
             echo '<p>No products found for the specified category.</p>';
