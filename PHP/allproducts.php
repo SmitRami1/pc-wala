@@ -1,15 +1,29 @@
+<?php
+session_start();
+
+// Check if the user is logged in
+if (isset($_SESSION["username"])) {
+    $loggedIn = true;
+    $username = $_SESSION["username"];
+} else {
+    $loggedIn = false;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | PC WALA</title>
-    <link rel="stylesheet" href="../CSS/allproducts.css">
-    <link rel="stylesheet" href="../CSS/main.css">
+    <title>Home | PC-WALA</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/home.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <img src="../Images/logo.png" alt="Can't Load Image" id="logo">
       <a class="navbar-brand" href="#">PC WALA</a>
@@ -33,10 +47,15 @@
         </ul>
         <form class="d-flex" role="search">
           <div class="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        </div>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          </div>
+          <?php if ($loggedIn) : ?>
+          </form>
+                      <a class="navbar-text login-stat" href="logout.php">Logout</a>
+                  <?php else : ?>
+                      <a href="login.php" class="btn btn-outline-success">Login</a>
+                  <?php endif; ?>
           <a href="#"><img src="../Images/cart.png" alt="Can't Load Image" id="cart"></a>
-        </form>
       </div>   
     </div>
   </nav>
