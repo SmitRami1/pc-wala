@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 31, 2024 at 04:40 PM
+-- Generation Time: Feb 02, 2024 at 04:12 PM
 -- Server version: 8.2.0
 -- PHP Version: 8.2.13
 
@@ -66,7 +66,8 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`name`, `price`, `category`, `image`) VALUES
-('I3 12th Gen', '₹9000', 'processor', 'https://raw.githubusercontent.com/SmitRami1/pc-wala/main/Images/i3.jpg');
+('I3 12th Gen', '₹9000', 'processor', 'https://raw.githubusercontent.com/SmitRami1/pc-wala/main/Images/i3.jpg'),
+('Intel Core i5-10600K', '₹21,999', 'processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/Intel%20i5-10600K.png?raw=true');
 
 -- --------------------------------------------------------
 
@@ -96,7 +97,8 @@ INSERT INTO `users` (`username`, `password`) VALUES
 ('f', 'd'),
 ('sdsd', 'sdsd'),
 ('fd', 'sd'),
-('rami', 'lkj');
+('rami', 'lkj'),
+('dsds', 'dsd');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

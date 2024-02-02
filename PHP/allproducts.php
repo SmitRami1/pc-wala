@@ -76,29 +76,31 @@ $result = $conn->query($sql);
         <?php
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-              echo '<div class = "products">
+              echo ' <div class = "products">
               <div class = "container">
                   <div class = "product-items">
-                    <div class="col">
+                      <!-- single product -->
                       <div class = "product">
-                        <a href="allproducts.php?category=' . $row["name"]  . '">
                           <div class = "product-content">
                               <div class = "product-img">
-                                  <img src = "'.$row["image"].'" alt = "product image" id="pro-img">
+                                  <img src = "'. $row['image'] .'" alt = "product image">
+                              </div>
+                              <div class = "product-btns">
+                                  <button type = "button" class = "btn-cart"> add to cart
+                                      <span><i class = "fas fa-plus"></i></span>
+                                  </button>
+                                  <button type = "button" class = "btn-buy"> buy now
+                                      <span><i class = "fas fa-shopping-cart"></i></span>
+                                  </button>
                               </div>
                           </div>
   
                           <div class = "product-info">
-                              <div class = "product-info-top">
-                                  <h2 class = "sm-title">'. $row["name"] .'</h2>
-                              </div>
+                              <a href = "#" class = "product-name">'. $row['name'] .'</a>
+                              <p class = "product-price">'. $row['price'] .'</p>
                           </div>
-                        </a>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>';
+  ';
             }
         } else {
             echo '<p>No products found for the specified category.</p>';
