@@ -86,10 +86,18 @@ if (isset($_SESSION["username"])) {
                                 <img src = "'.$row["image"].'" alt = "product image" id="pro-img">
                             </div>
                         </div>
-
                         <div class = "product-info">
-                            <div class = "product-info-top">
-                                <h2 class = "sm-title">'. $row["name"] .'</h2>
+                        <div class = "product-info-top">
+                        <h2 class = "sm-title">'. $row["name"] .'</h2>
+                        <p class = "product-price">₹ '. $row["price"] .'</p>
+                        </div>
+                        <div class = "product-btns">
+                                <button type = "button" class = "btn-cart"> add to cart
+                                    <span><i class = "fas fa-plus"></i></span>
+                                </button>
+                                <button type = "button" class = "btn-buy"> buy now
+                                    <span><i class = "fas fa-shopping-cart"></i></span>
+                                </button>
                             </div>
                         </div>
                       </a>

@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap');
 
-:root{
-    --white-light: rgba(255, 255, 255, 0.5);
+:root {
+    --white-light: rgba(255, 255, 255, 0.9);
     --carribean-green: #40c9a2;
-    --gray: #8b8b8bb4;
+    --gray: #c1c1c1;
+    --alice-blue: #e0edf8;
 }
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-body{
+
+body {
     overflow-x: hidden;
     font-family: 'Quicksand', sans-serif;
+    background: var(--alice-blue);
 }
 
 /* Utility stylings */
 img{
-    height: 200px;
-    width: 200px;
-    display: block;
+    height: 180px;
+    width: 178px;
+    position: relative;
+    left: 11px;
+    top: 10px;
 }
 .container{
     width: 88vw;
@@ -44,7 +44,7 @@ img{
     font-family: 'Roboto', sans-serif;
 }
 .sm-title{
-    font-weight: 300;
+    font-weight: 450;
     font-size: 1rem;
     text-transform: uppercase;
 }
@@ -66,9 +66,23 @@ img{
     width: 70%;
     margin: 0.9rem auto;
 }
-.product{
+.product {
     margin: 2rem;
     position: relative;
+    background: var(--white-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+    border-radius: 10px;
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.product:hover {
+    transform: scale(1.01);
+    box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.2); /* Adjusted box shadow on hover */
+}
+
+.product-content {
+    padding: 2rem;
 }
 .product a{
     text-decoration: none;
@@ -81,7 +95,7 @@ img{
 }
 .product-img{
     background: var(--white-light);
-    box-shadow: 0 0 20px 10px var(--white-light);
+    box-shadow: 0 0 10px 13px var(--white-light);
     width: 200px;
     height: 200px;
     margin: 0 auto;
@@ -92,8 +106,8 @@ img{
     display: flex;
     justify-content: center;
     margin-top: 1.4rem;
-    opacity: 0;
     transition: opacity 0.6s ease;
+    border: 2px black;
 }
 .btn-cart, .btn-buy{
     background: transparent;
@@ -114,7 +128,7 @@ img{
     background: var(--carribean-green);
 }
 .btn-buy{
-    background: white;
+    background: rgb(227, 221, 221);
 }
 .btn-buy:hover{
     background: var(--carribean-green);
@@ -153,9 +167,6 @@ img{
 }
 .product:hover .product-img{
     background: var(--carribean-green);
-}
-.product:hover .product-btns{
-    opacity: 1;
 }
 .off-info .sm-title{
     background: var(--carribean-green);
@@ -225,6 +236,12 @@ img{
 .btn-dark:hover{
     background: var(--carribean-green);
 }
+
+
+
+
+
+
 
 /* Media Queries */
 @media screen and (min-width: 992px){
