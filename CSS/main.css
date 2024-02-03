@@ -6,7 +6,6 @@
     --gray: #c1c1c1;
     --alice-blue: #e0edf8;
 }
-
 body {
     overflow-x: hidden;
     font-family: 'Quicksand', sans-serif;
@@ -125,14 +124,13 @@ img{
     color: white;
 }
 .btn-cart:hover{
-    background: var(--carribean-green);
+    transform: scale(1.1);
 }
 .btn-buy{
     background: rgb(227, 221, 221);
 }
 .btn-buy:hover{
-    background: var(--carribean-green);
-    color: #fff;
+    transform: scale(1.1);
 }
 .product-info{
     background: white;
