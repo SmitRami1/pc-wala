@@ -83,7 +83,7 @@ if (isset($_SESSION["username"])) {
                       <a href="#">
                         <div class = "product-content">
                             <div class = "product-img">
-                                <img src = "'.$row["image"].'" alt = "product image" id="pro-img">
+                                <img src = "'.$row["image"].'" alt = "Loading Image.." id="pro-img">
                             </div>
                         </div>
                         <div class = "product-info">

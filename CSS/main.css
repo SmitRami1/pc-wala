@@ -22,7 +22,7 @@ img{
 }
 .container{
     width: 88vw;
-    margin: 0 auto;
+    margin-bottom: -80px;
 }
 .lg-title,
 .md-title,
