@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 05, 2024 at 08:16 AM
--- Server version: 8.0.31
--- PHP Version: 8.0.26
+-- Generation Time: Feb 07, 2024 at 06:46 AM
+-- Server version: 8.2.0
+-- PHP Version: 8.2.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -75,7 +75,13 @@ INSERT INTO `products` (`name`, `price`, `category`, `image`) VALUES
 ('AMD Ryzen 3 3300X', '9,999', 'processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/ryzen%203%203300x.png?raw=true'),
 ('AMD Ryzen 5 5500', '7,999', 'processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/ryzen%205%205500.png?raw=true'),
 ('NVIDIA GEFORCE GTX 1650', '10,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/GIGABYTE_GeForce_GTX_1650-9999.png?raw=true'),
-('NVIDIA GEFORCE RTX 3080', '1,19,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/Asus%20ROG%20%20RTX%203080.png?raw=true');
+('NVIDIA GEFORCE RTX 3080', '1,19,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/Asus%20ROG%20%20RTX%203080.png?raw=true'),
+('ASUS Dual Radeon RX 6600', '18,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/ASUS_Dual_Radeon_RX_6600_8_GB-18999-.png?raw=true'),
+('NVIDIA GEFORCE GTX 1660 Super', '19,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/GTX_1660_Super_-19999%20.png?raw=true'),
+('NVIDIA GEFORCE RTX 4060', '28,099', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/rtx_4060_28099.png?raw=true'),
+('NVIDIA GEFORCE RTX 2060', '29,099', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/rtx_2060_29099.png?raw=true'),
+('AMD RX 5500 XT', '18,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/RX_5500_XT-18999%20.png?raw=true'),
+('NVIDIA GEFORCE RTX 3070', '79,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/RTX_3070_80000.png?raw=true');
 
 -- --------------------------------------------------------
 
