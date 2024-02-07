@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 03, 2024 at 02:08 PM
--- Server version: 8.2.0
--- PHP Version: 8.2.13
+-- Generation Time: Feb 05, 2024 at 08:16 AM
+-- Server version: 8.0.31
+-- PHP Version: 8.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -66,9 +66,16 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`name`, `price`, `category`, `image`) VALUES
-('i3-12100F', '9000', 'processor', 'https://raw.githubusercontent.com/SmitRami1/pc-wala/main/Images/i3-12100F.png'),
+('I3-12100F', '9000', 'processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/I3-12100F.png?raw=true'),
 ('Intel Core i5-10600K', '21,999', 'processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/Intel%20i5-10600K.png?raw=true'),
-('Intel Core i5-11400', '14,499', 'processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/Intel%20Core%20i5-11400.png?raw=true');
+('Intel Core i5-11400', '14,499', 'processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/Intel%20Core%20i5-11400.png?raw=true'),
+('Intel Core I7 13700K', '34,999', 'processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/Intel-Core-I7-13700K.png?raw=true'),
+('AMD Ryzen 9 5900X', '29,999', 'processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/ryzen_9_5900x.png?raw=true'),
+('AMD Ryzen 7 5700G', '17,999', 'processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/ryzen%207%205700g.png?raw=true'),
+('AMD Ryzen 3 3300X', '9,999', 'processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/ryzen%203%203300x.png?raw=true'),
+('AMD Ryzen 5 5500', '7,999', 'processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/ryzen%205%205500.png?raw=true'),
+('NVIDIA GEFORCE GTX 1650', '10,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/GIGABYTE_GeForce_GTX_1650-9999.png?raw=true'),
+('NVIDIA GEFORCE RTX 3080', '1,19,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/Asus%20ROG%20%20RTX%203080.png?raw=true');
 
 -- --------------------------------------------------------
 
@@ -99,7 +106,8 @@ INSERT INTO `users` (`username`, `password`) VALUES
 ('sdsd', 'sdsd'),
 ('fd', 'sd'),
 ('rami', 'lkj'),
-('dsds', 'dsd');
+('dsds', 'dsd'),
+('h', '463696');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
