@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 07, 2024 at 06:46 AM
+-- Generation Time: Feb 20, 2024 at 09:56 AM
 -- Server version: 8.2.0
 -- PHP Version: 8.2.13
 
@@ -74,14 +74,22 @@ INSERT INTO `products` (`name`, `price`, `category`, `image`) VALUES
 ('AMD Ryzen 7 5700G', '17,999', 'processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/ryzen%207%205700g.png?raw=true'),
 ('AMD Ryzen 3 3300X', '9,999', 'processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/ryzen%203%203300x.png?raw=true'),
 ('AMD Ryzen 5 5500', '7,999', 'processor', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/ryzen%205%205500.png?raw=true'),
-('NVIDIA GEFORCE GTX 1650', '10,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/GIGABYTE_GeForce_GTX_1650-9999.png?raw=true'),
-('NVIDIA GEFORCE RTX 3080', '1,19,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/Asus%20ROG%20%20RTX%203080.png?raw=true'),
-('ASUS Dual Radeon RX 6600', '18,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/ASUS_Dual_Radeon_RX_6600_8_GB-18999-.png?raw=true'),
-('NVIDIA GEFORCE GTX 1660 Super', '19,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/GTX_1660_Super_-19999%20.png?raw=true'),
-('NVIDIA GEFORCE RTX 4060', '28,099', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/rtx_4060_28099.png?raw=true'),
-('NVIDIA GEFORCE RTX 2060', '29,099', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/rtx_2060_29099.png?raw=true'),
+('GEFORCE GTX 1650', '10,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/GIGABYTE_GeForce_GTX_1650-9999.png?raw=true'),
+('GEFORCE RTX 3080', '1,19,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/Asus%20ROG%20%20RTX%203080.png?raw=true'),
+('ASUS Dual RX 6600', '18,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/ASUS_Dual_Radeon_RX_6600_8_GB-18999-.png?raw=true'),
+('GEFORCE GTX 1660', '19,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/GTX_1660_Super_-19999%20.png?raw=true'),
+('GEFORCE RTX 4060', '28,099', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/rtx_4060_28099.png?raw=true'),
+('GEFORCE RTX 2060', '29,099', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/rtx_2060_29099.png?raw=true'),
 ('AMD RX 5500 XT', '18,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/RX_5500_XT-18999%20.png?raw=true'),
-('NVIDIA GEFORCE RTX 3070', '79,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/RTX_3070_80000.png?raw=true');
+('GEFORCE RTX 3070', '79,999', 'Graphics Card', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/RTX_3070_80000.png?raw=true'),
+('CORSAIR RGB 16GB', '9999', 'Ram', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/CORSAIR_Vengeance_RGB_PRO_16GB__2x8GB__-9999-removebg-preview.png?raw=true'),
+('GSKILL Trident 32GB', '8200', 'Ram', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/G.SKILL_Trident_Z_RGB_32GB_2_16GB-8200.png?raw=true'),
+('Predator Vesta 32GB', '10,999', 'Ram', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/Predator_Vesta_32gb_10999.png?raw=true'),
+('Patriot Viper 8GB', '2000', 'Ram', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/Patriot_Viper_Steel_2000.png?raw=true'),
+('Team-Force 16GB', '4500', 'Ram', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/TeamGroup_T-Force_4500.png?raw=true'),
+('XPG ADATA 8GB', '2000', 'Ram', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/XPG_ADATA_GAMMIX_D30_DDR4_8GB-2000.png?raw=true'),
+('KINGSTONE 8GB RGB', '2500', 'Ram', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/kingston_ram_8gb_ddr4-_2500-.png?raw=true'),
+('KINGSTONE FURY 8GB', '2199', 'Ram', 'https://github.com/SmitRami1/pc-wala/blob/main/Images/ram.png?raw=true');
 
 -- --------------------------------------------------------
 
