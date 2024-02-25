@@ -55,7 +55,7 @@ if (isset($_SESSION["userid"])) {
                   <?php else : ?>
                       <a href="login.php" class="btn btn-outline-success">Login</a>
                   <?php endif; ?>
-          <a href="#"><img src="../Images/cart.png" alt="Can't Load Image" id="cart"></a>
+          <a href="cart.php"><img src="../Images/cart.png" alt="Can't Load Image" id="cart"></a>
       </div>   
     </div>
   </nav>
