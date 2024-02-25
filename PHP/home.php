@@ -2,9 +2,9 @@
 session_start();
 
 // Check if the user is logged in
-if (isset($_SESSION["username"])) {
+if (isset($_SESSION["userid"])) {
     $loggedIn = true;
-    $username = $_SESSION["username"];
+    $username = $_SESSION["userid"];
 } else {
     $loggedIn = false;
 }
@@ -33,10 +33,10 @@ if (isset($_SESSION["username"])) {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#" id="hover">Home</a>
+            <a class="nav-link" aria-current="page" href="home.php" id="hover">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="hover">Category</a>
+            <a class="nav-link" href="#category" id="hover">Category</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" id="hover">Pre-Built</a>
@@ -98,14 +98,14 @@ if (isset($_SESSION["username"])) {
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             echo '<div class = "products">
-            <div class = "container">
+            <div class = "container" id="category">
                 <div class = "product-items">
                   <div class="col">
                     <div class = "product">
                       <a href="allproducts.php?category=' . $row["name"]  . '">
                         <div class = "product-content">
                             <div class = "product-img">
-                                <img src = "'.$row["image"].'" alt = "Loading Image..." id="pro-img">
+                                <img src = "'.$row["image"].'" alt = "product image" id="pro-img">
                             </div>
                         </div>
 

@@ -33,18 +33,21 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usrname = $_POST["usrname"];
     $pass = $_POST["pass"];
-    $login_query = "SELECT * FROM users WHERE username = '$usrname' AND password = '$pass'";
+    $login_query = "SELECT userid, username, password FROM users WHERE username = '$usrname' AND password = '$pass'";
     $result = $conn->query($login_query);
 
-if ($result->num_rows == 1) {
-    $_SESSION["username"] = $usrname;
-    setcookie("username", $usrname, time() + 3600, "/");
-    header("Location: ../PHP/home.php");
-    exit();
-} 
-else{
-    $error_message = "Invalid username or password";
-}
+    if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+        $_SESSION["username"] = $row["username"];
+        $_SESSION["userid"] = $row["userid"];
+        setcookie("username", $row["username"], time() + 3600, "/", "", true, true);
+        setcookie("userid", $row["userid"], time() + 3600, "/", "", true, true);
+        header("Location: ../PHP/home.php");
+        exit();
+    } 
+    else{
+        $error_message = "Invalid username or password";
+    }
 
 }
 

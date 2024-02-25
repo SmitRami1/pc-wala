@@ -33,10 +33,10 @@ if (isset($_SESSION["username"])) {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#" id="hover">Home</a>
+            <a class="nav-link" aria-current="page" href="home.php" id="hover">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="hover">Category</a>
+            <a class="nav-link" href="#container" id="hover">Category</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" id="hover">Pre-Built</a>
@@ -80,7 +80,7 @@ if (isset($_SESSION["username"])) {
                 <div class = "product-items">
                   <div class="col">
                     <div class = "product">
-                      <a href="#">
+                      <a href="product.php?id='. $row["id"] .'">
                         <div class = "product-content">
                             <div class = "product-img">
                                 <img src = "'.$row["image"].'" alt = "Loading Image.." id="pro-img">
