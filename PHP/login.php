@@ -18,8 +18,6 @@
             <input type="password" placeholder="Password" name="pass">
             <input type="submit" id="sbt" name="sbt" value="Login">
             <?php
-session_start();
-
 $servername = "localhost";
 $username = "root";
 $password = "";

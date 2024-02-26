@@ -1,4 +1,7 @@
 <?php
+include("nav.php")
+?>
+<?php
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -16,7 +19,6 @@ $stmt->bind_param("i", $id);
 $stmt->execute();
 $result = $stmt->get_result();
 $product = $result->fetch_assoc();
-session_start();
 
 if (isset($_SESSION["username"])) {
     $loggedIn = true;

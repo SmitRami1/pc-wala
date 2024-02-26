@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@750&display=swap');
+
 body {
     font-family: 'Baloo Tamma 2', cursive;
     padding: 0;
@@ -7,6 +8,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 #logo {
     height: 50px;
     width: 50px;
@@ -38,7 +40,7 @@ body {
 .navbar {
     background-color: rgba(255, 255, 255, 0.9); /* Adjust the opacity as needed */
     border-bottom: 2px solid rgba(165, 165, 165, 0.438);
-    z-index: 1000; 
+    z-index: 1000; /* Ensure the navbar is above other elements */
 }
 
 .nav-link {
@@ -52,4 +54,37 @@ body {
     height: 100%;
     width: 100%;
     color: rgb(248, 248, 248);
+}
+
+.form-control {
+    width: 210px;
+    height: 46px;
+    margin-top: 4px;
+    border-color: rgba(0, 0, 0, 0.315);
+    border-width: 2.1px;
+    border-radius: 25px;
+    font-size: large;
+    position: relative;
+    right: 10px;
+}
+
+.form-control:hover {
+    width: 219px;
+    transition: 0.2s;
+    margin-left: -9px;
+}
+
+#hover:hover {
+    font-size: 19.7px;
+    transition: 0.2s;
+    margin: -3px;
+    margin-top: 3px;
+    color: black;
+}
+.btn {
+    height: 40px;
+}
+
+.btn-outline-success {
+    margin-top: 9px;
 }

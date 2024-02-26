@@ -1,3 +1,6 @@
+<?php
+include("nav.php")
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <?php
-        session_start(); 
+        <?php 
         $servername = "localhost";
         $username = "root";
         $password = "";
