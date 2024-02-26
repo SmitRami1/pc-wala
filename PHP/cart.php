@@ -9,48 +9,34 @@
 <body>
     <div class="container">
         <?php
-        session_start(); // Start session to access cookies
+        session_start(); 
         $servername = "localhost";
         $username = "root";
         $password = "";
         $dbname = "pc-wala";
         $conn = new mysqli($servername, $username, $password, $dbname);
-
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-
-        // Check if user is logged in
         if(isset($_COOKIE['userid'])) {
-            $user_id = $_COOKIE['userid']; // Get user ID from cookie
-
-            // Function to update quantity in cart
+            $user_id = $_COOKIE['userid'];
             if(isset($_POST['update_quantity'])) {
                 $product_id = $_POST['product_id'];
                 $new_quantity = $_POST['quantity'];
-
-                // Update quantity in cart
                 $update_query = "UPDATE cart SET quantity = $new_quantity WHERE userid = '$user_id' AND productid = $product_id";
                 $conn->query($update_query);
             }
-
-            // Function to remove product from cart
             if(isset($_POST['remove_product'])) {
                 $product_id = $_POST['product_id'];
-
-                // Remove product from cart
                 $remove_query = "DELETE FROM cart WHERE userid = '$user_id' AND productid = $product_id";
                 $conn->query($remove_query);
             }
-
-            // Fetch products in the cart
             $query_cart = "SELECT cart.productid, cart.quantity, products.name, products.image, products.price 
                            FROM cart 
                            INNER JOIN products ON cart.productid = products.id 
                            WHERE cart.userid = '$user_id'";
             $result_cart = $conn->query($query_cart);
 
-            // Display product details
             if($result_cart->num_rows > 0) {
                 while($row_cart = $result_cart->fetch_assoc()) {
                     $product_id = $row_cart['productid'];
@@ -83,9 +69,9 @@
                 }
             } else {
                 echo "<p class='empty-cart'>Your cart is empty.</p>";
+                echo "<img src='../Images/empty-cart.jpg' id='cart_image'>  ";
             }
         } else {
-            // Handle case when user is not logged in
             echo "Please log in to view your cart.";
         }
         ?>

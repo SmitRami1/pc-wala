@@ -12,6 +12,10 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .product {
@@ -67,7 +71,11 @@ body {
     background-color: #45a049;
 }
 
-.empty-cart {
+.empty-cart{
     text-align: center;
     margin-top: 20px;
+}
+#cart_image {
+    height: 120px;
+    width: 110px;
 }

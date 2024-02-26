@@ -8,10 +8,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Retrieve the id parameter from the URL
 $id = isset($_GET['id']) ? $_GET['id'] : '';
 
-// Fetch the product details using the id parameter
 $sql = "SELECT * FROM products WHERE id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $id);
@@ -20,7 +18,6 @@ $result = $stmt->get_result();
 $product = $result->fetch_assoc();
 session_start();
 
-// Check if the user is logged in
 if (isset($_SESSION["username"])) {
     $loggedIn = true;
     $username = $_SESSION["username"];

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@750&display=swap');
+body {
+    font-family: 'Baloo Tamma 2', cursive;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#logo {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+}
+
+#cart {
+    height: 55px;
+    width: 55px;
+    position: relative;
+
+}
+
+#cart:hover {
+    height: 60px;
+    width: 60px;
+    transition: 0.2s;
+    margin: -2.7px;
+}
+
+.navbar-brand {
+    margin-left: 60px;
+    font-family: 'Baloo Tamma 2', cursive;
+    font-size: 26px;
+    font-weight: bold;
+    color: black;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust the opacity as needed */
+    border-bottom: 2px solid rgba(165, 165, 165, 0.438);
+    z-index: 1000; 
+}
+
+.nav-link {
+    color: rgb(22, 22, 22);
+    font-weight: bolder;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: rgb(248, 248, 248);
+}
