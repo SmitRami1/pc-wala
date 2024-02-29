@@ -235,10 +235,25 @@ img{
     background: var(--carribean-green);
 }
 
-
-
-
-
+#search{
+    position: relative;
+    top: 22px;
+    left: 20px;
+    font-family: "'Roboto', sans-serif";
+    text-transform: uppercase;
+    font-weight: 520;
+}
+.no-result{
+    position: relative;
+    top: 200px;
+    left: 550px;
+    height: 800px;
+    width: 6000px;
+}
+.no-result img{
+    height: 100px;
+    transform: scale(3,3);
+}
 
 
 /* Media Queries */

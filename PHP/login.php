@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["username"] = $row["username"];
         $_SESSION["userid"] = $row["userid"];
         setcookie("username", $row["username"], time() + 3600, "/", "", true, true);
-        setcookie("userid", $row["userid"], time() + 3600, "/", "", true, true);
+        setcookie("user_id", $row["userid"], time() + 3600, "/", "", true, true);
         header("Location: ../PHP/home.php");
         exit();
     } 

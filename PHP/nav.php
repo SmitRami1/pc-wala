@@ -1,12 +1,11 @@
 <?php
 session_start();
-// Check if the user is logged in
-if (isset($_SESSION["userid"])) {
-    $loggedIn = true;
+if (isset($_SESSION['user_id'])) {
+    $login = true;
 } else {
-    $loggedIn = false;
+    $login = false;
 }
-
+ 
 ?>
 <head>
     <meta charset="UTF-8">
@@ -38,11 +37,20 @@ if (isset($_SESSION["userid"])) {
             <a class="nav-link" href="#" id="hover">Contact Us</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <div class="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          </div>
-          <?php if ($loggedIn) : ?>
+        <form class="d-flex" role="search" action="search.php" method="GET">
+          <?php
+          if (isset($_GET['q'])) {
+            $query=$_GET['q'];
+            echo '<div class="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q" value="'.$query.'">
+          </div>';
+          }else{
+            echo '<div class="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+          </div>';
+          }
+          ?>
+          <?php if ($login) : ?>
           </form>
                       <a class="navbar-text login-stat" href="logout.php">Logout</a>
                   <?php else : ?>
