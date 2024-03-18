@@ -9,11 +9,11 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-if(isset($_SESSION['userid'])) {
-    $userid = $_SESSION['userid'];
+if(isset($_COOKIE['user_id'])) {
+    $userid = $_COOKIE['user_id'];
     $productid = $_GET['id']; 
     $quantity = 1;
-    $query = "INSERT INTO cart (userid, productid, quantity) VALUES ('$userid', '$productid', '$quantity')";
+    $query = "INSERT INTO cart (userid, productid, quantity) VALUES ('$userid', '$productid', '$quantity');";
     $result = mysqli_query($conn, $query);
     header("Location: cart.php");
     exit();
