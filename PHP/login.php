@@ -17,7 +17,7 @@
             <input type="text" placeholder="Username" name="usrname">
             <input type="password" placeholder="Password" name="pass">
             <input type="submit" id="sbt" name="sbt" value="Login">
-            <?php
+<?php
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -38,8 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         $_SESSION["username"] = $row["username"];
         $_SESSION["userid"] = $row["userid"];
-        setcookie("username", $row["username"], time() + 3600, "/", "", true, true);
-        setcookie("user_id", $row["userid"], time() + 3600, "/", "", true, true);
+        setcookie("username", $row["username"], time() + 3600, "/");
+        setcookie("userid", $row["userid"], time() + 3600, "/");
         header("Location: ../PHP/home.php");
         exit();
     } 

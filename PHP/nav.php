@@ -50,8 +50,8 @@ if (isset($_SESSION['user_id'])) {
           </div>';
           }
           ?>
-          <?php if ($login) : ?>
           </form>
+          <?php if ($login) : ?>
                       <a class="navbar-text login-stat" href="logout.php">Logout</a>
                   <?php else : ?>
                       <a href="login.php" class="btn btn-outline-success">Login</a>
