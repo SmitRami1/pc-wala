@@ -21,8 +21,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-if(isset($_COOKIE['user_id'])) {
-    $user_id = $_COOKIE['user_id'];
+if(isset($_COOKIE['userid'])) {
+    $user_id = $_COOKIE['userid'];
     include("cart_items.php");
 } else {
     echo "Please log in to view your cart.";

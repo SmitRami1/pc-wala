@@ -7,7 +7,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$user_id = $_COOKIE['user_id'];
+$user_id = $_COOKIE['userid'];
     if(isset($_POST['update_quantity'])) {
         $product_id = $_POST['product_id'];
         $new_quantity = $_POST['quantity'];
