@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_COOKIE['user_id'])) {
+if (isset($_COOKIE['userid'])) {
     $login = true;
 } else {
     $login = false;
