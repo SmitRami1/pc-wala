@@ -52,7 +52,7 @@ if (isset($_SESSION["username"])) {
             </div>
             <div class="buy-section">
                 <a href="add_to_cart.php?id=<?php echo $product['id']; ?>" class="cart-btn">Add to cart</a>
-                <a href="#" class="cart-btn">Buy Now</a>
+                <a href="checkout.php?product_id=<?php echo $product['id']?>" class="cart-btn">Buy Now</a>
             </div>
         </div>
     </main>
