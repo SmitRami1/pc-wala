@@ -1,3 +1,87 @@
+<style>
+    * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.product-table {
+  width: 80%;
+  margin-top: 1%;
+  margin-left: 10%;
+  margin-right: 10% ;
+  border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+  max-height: 3px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.product-table th {
+  background-color: #f2f2f2;
+}
+
+.product-image {
+  height: 10px;
+  width: auto;
+}
+
+.product-name {
+  font-size: 16px;
+}
+</style>
 <?php
 // Include necessary files, such as the navigation and database connection
 include("nav.php");
@@ -28,27 +112,32 @@ $priceasnumber = (float) str_replace(',', '', $pricestring); // Convert to numbe
 $quantity = $row_cart['quantity'];
 $subtotal = $priceasnumber * $quantity; // Get subtotal
 $totalprice += $subtotal; // Add subtotal to total price
-}
+
 ?>
-<div class="product">
-    <div class="product-details">
-    <img src="<?php echo $image; ?>" alt="Product Image">
-    <div class="product-info">
-        <h3><?php echo $product_name; ?></h3>
-        <p>Price: ₹<?php echo $pricestring; ?></p> <!-- Display price with commas -->
-        <p>Quantity: 
-            <form method="post" class="actions">
-                <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
-                <input type="number" name="quantity" value="<?php echo $quantity; ?>" min="1">
-                <input type="submit" name="update_quantity" value="Update">
-            </form>
-        </p>
-    </div>
-</div>
-</div>
+<table class='product-table'>
+  <thead>
+    <tr>
+      <th>Product Image</th>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+</thead>
+<tbody>
+      <tr>
+      <td><img src="<?php echo $image; ?>" alt="Product Image" width="80"></td>
+      <td><?php echo $product_name; ?></td>
+      <td><?php echo $pricestring; ?></td>
+      <td>
+        <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
+        <?php echo $quantity; ?>
+      </td>
+      </tr>
+      </tbody>
+      </table>
 <?php
 }
-}else{
+}}else{
     $product_only="SELECT * FROM products WHERE id = ".$_GET["product_id"]."";
     $res_product = $conn->query($product_only);
     $option2 = $res_product->fetch_assoc();
@@ -56,16 +145,49 @@ $totalprice += $subtotal; // Add subtotal to total price
     $priceasnumber = (float) str_replace(',', '', $pricestring); // Convert to number
     $subtotal = $priceasnumber; // Get subtotal
     $totalprice += $subtotal; // Add subtotal to total price
-    ?>
-    <div class="product">
-    <div class="product-details">
-    <img src="<?php echo $option2["image"]; ?>" alt="Product Image">
-    <div class="product-info">
-        <h3><?php echo $option2["name"]; ?></h3>
-        <p>Price: ₹<?php echo $pricestring; ?></p> <!-- Display price with commas -->
-    </div>
-</div>
-</div>
+    ?> 
+<table class='product-table'>
+  <thead>
+    <tr>
+      <th>Product Image</th>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+</thead>
+<tbody>
+      <tr>
+      <td><img src="<?php echo $option2['image']; ?>" alt="Product Image" width="80"></td>
+      <td><?php echo $option2['name']; ?></td>
+      <td><?php echo $option2['price']; ?></td>
+      <td>
+        <?php echo "1";?>
+      </td>
+      </tr>
+      </tbody>
+      </table>
+
 <?php
 }
 ?>
+<div class="container">
+        <h1>Checkout</h1>
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" cols="50" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Place Order">
+            </div>
+        </form>
+    </div>
+    

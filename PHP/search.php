@@ -32,7 +32,7 @@ if(isset($_GET['q'])) {
     $query = $_GET['q'];
     
     // Prepare SQL statement
-    $sql = "SELECT * FROM products WHERE name LIKE '%$query%' OR description LIKE '%$query%'";
+    $sql = "SELECT * FROM products WHERE name LIKE '%$query%'";
     
     // Execute SQL query
     $result = $conn->query($sql);
