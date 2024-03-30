@@ -81,6 +81,12 @@ input[type="submit"]:hover {
 .product-name {
   font-size: 16px;
 }
+#total{
+    float: right;
+    position: relative;
+    right: 150px;
+    margin-top: 80px;
+}
 </style>
 <?php
 // Include necessary files, such as the navigation and database connection
@@ -103,6 +109,15 @@ if (isset($_POST['checkout_cart'])) {
 $result_cart = $conn->query($query_cart);
 
 if($result_cart->num_rows > 0) {
+echo "<table class='product-table'>
+      <thead>
+        <tr>
+          <th>Product Image</th>
+          <th>Product Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+        </tr>
+    </thead>";
 while($row_cart = $result_cart->fetch_assoc()) {
 $product_id = $row_cart['productid'];
 $product_name = $row_cart['name'];
@@ -114,15 +129,6 @@ $subtotal = $priceasnumber * $quantity; // Get subtotal
 $totalprice += $subtotal; // Add subtotal to total price
 
 ?>
-<table class='product-table'>
-  <thead>
-    <tr>
-      <th>Product Image</th>
-      <th>Product Name</th>
-      <th>Price</th>
-      <th>Quantity</th>
-    </tr>
-</thead>
 <tbody>
       <tr>
       <td><img src="<?php echo $image; ?>" alt="Product Image" width="80"></td>
@@ -133,10 +139,12 @@ $totalprice += $subtotal; // Add subtotal to total price
         <?php echo $quantity; ?>
       </td>
       </tr>
-      </tbody>
-      </table>
+      <?php
+}?>
+</tbody>
+</table>
 <?php
-}
+echo "<h4 id='total'>Total Amount : ₹".$totalprice."</h4>";
 }}else{
     $product_only="SELECT * FROM products WHERE id = ".$_GET["product_id"]."";
     $res_product = $conn->query($product_only);
@@ -172,7 +180,7 @@ $totalprice += $subtotal; // Add subtotal to total price
 ?>
 <div class="container">
         <h1>Checkout</h1>
-        <form action="" method="POST">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -190,4 +198,7 @@ $totalprice += $subtotal; // Add subtotal to total price
             </div>
         </form>
     </div>
+
+<?php
+
     
