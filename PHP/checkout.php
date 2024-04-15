@@ -1,3 +1,6 @@
+<?php
+error_reporting(1);
+?>
 <style>
     * {
     box-sizing: border-box;
@@ -127,25 +130,48 @@ $priceasnumber = (float) str_replace(',', '', $pricestring); // Convert to numbe
 $quantity = $row_cart['quantity'];
 $subtotal = $priceasnumber * $quantity; // Get subtotal
 $totalprice += $subtotal; // Add subtotal to total price
-
 ?>
 <tbody>
-      <tr>
-      <td><img src="<?php echo $image; ?>" alt="Product Image" width="80"></td>
-      <td><?php echo $product_name; ?></td>
-      <td><?php echo $pricestring; ?></td>
-      <td>
-        <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
-        <?php echo $quantity; ?>
-      </td>
-      </tr>
-      <?php
-}?>
+  <tr>
+    <td><img src="<?php echo $image; ?>" alt="Product Image" width="80"></td>
+    <td><?php echo $product_name; ?></td>
+    <td><?php echo $pricestring; ?></td>
+    <td>
+      <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
+      <?php echo $quantity; ?>
+    </td>
+  </tr>
+  <?php
+}
+?>
 </tbody>
 </table>
 <?php
 echo "<h4 id='total'>Total Amount : ₹".$totalprice."</h4>";
-}}else{
+}?>
+<div class="container">
+        <h1>Checkout</h1>
+        <form action="save_order.php" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="number" id="phone" name="number" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" cols="50" required></textarea>
+            </div>
+            <div class="form-group">
+                <input type="hidden" name="checkout_cart">
+                <input type="submit" value="Place Order" name="sbt">
+            </div>
+        </form>
+    </div>
+    <?php
+}else{
     $product_only="SELECT * FROM products WHERE id = ".$_GET["product_id"]."";
     $res_product = $conn->query($product_only);
     $option2 = $res_product->fetch_assoc();
@@ -174,31 +200,30 @@ echo "<h4 id='total'>Total Amount : ₹".$totalprice."</h4>";
       </tr>
       </tbody>
       </table>
-
-<?php
-}
-?>
-<div class="container">
+      <div class="container">
         <h1>Checkout</h1>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+        <form action="save_order.php" method="POST">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
+                <input type="number" id="phone" name="number" required>
             </div>
             <div class="form-group">
                 <label for="address">Address:</label>
                 <textarea id="address" name="address" rows="4" cols="50" required></textarea>
             </div>
             <div class="form-group">
-                <input type="submit" value="Place Order">
+                <input type="hidden" name="product_id" value="<?php echo $_GET['product_id'];?>">
+                <input type="submit" value="Place Order" name="sbt">
             </div>
         </form>
     </div>
-
 <?php
+}
+?>
+
 
     

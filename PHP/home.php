@@ -46,7 +46,7 @@ include("nav.php")
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "SELECT name, image FROM categories";
+    $sql = "SELECT name, image FROM categories WHERE card=1";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {

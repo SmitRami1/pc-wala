@@ -31,7 +31,7 @@ if (isset($_COOKIE['userid'])) {
             <a class="nav-link" href="home.php#category" id="hover">Category</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" id="hover">Pre-Built</a>
+            <a class="nav-link" href="allproducts.php?category=Pre-Built" id="hover">Pre-Built</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" id="hover">Contact Us</a>
